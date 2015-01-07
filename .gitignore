@@ -4,3 +4,4 @@ tmp
 capybara*.html
 tournaments
 players
+.ruby-version
