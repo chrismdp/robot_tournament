@@ -26,6 +26,8 @@ class Map
 
     if tile_at(*new_position) == '*'
       raise WallCollision
+    elsif tile_at(*new_position) == 'M'
+      raise MinotaurCollision
     else
       @positions[player] = new_position
     end
@@ -75,6 +77,7 @@ class Map
   end
 
   PlayerCollision = Class.new(StandardError)
+  MinotaurCollision = Class.new(StandardError)
   WallCollision = Class.new(StandardError)
   IllegalMove = Class.new(StandardError)
 end

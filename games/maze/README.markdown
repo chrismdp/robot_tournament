@@ -32,7 +32,7 @@ Based on the state of the board, and the header which states which player you ar
 # Rules
 
 * The size and layout of the maze cannot be assumed to be fixed and could change each game (but will not change during a single game).
-* If you make a move into a wall, you stay put and don't move.
+* If you make a move into a wall, you forfeit the game
 * If you move into the other player, you forfeit the game.
 * If you don't respond with N, S, E or W, you forfeit the game.
 * If you move onto the F square first, you win.

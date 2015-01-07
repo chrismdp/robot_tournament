@@ -99,6 +99,20 @@ describe Map do
       map.winner.should == '2'
     end
 
+    context 'a map with a minotaur' do
+      let(:blueprint) {
+        "*************\n" +
+        "*.M.........*\n" +
+        "*...........*\n" +
+        "**F**********"
+      }
+      let(:map) { Map.new(blueprint, [1,1], [1,2]) }
+
+      it "moves the minotaur each turn" do
+        expect { map.move('1', 'E') }.to raise_error(Map::MinotaurCollision)
+      end
+    end
+
     context 'a map with ice' do
       let(:blueprint) {
         "*************\n" +
